@@ -2,7 +2,6 @@ package com.example.Happireshipi.services;
 
 import com.example.Happireshipi.model.Meal;
 import com.example.Happireshipi.repository.MealRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
