@@ -7,6 +7,10 @@ services:
       - "8080:8080"
     depends_on:
       - db
+    environment:
+      - SPRING.DATASOURCE.URL=jdbc:postgresql://db:5432/postgres
+      - SPRING.DATASOURCE.USERNAME=postgres
+      - SPRING.DATASOURCE.PASSWORD=postgres
   frontend:
     build:
       context: ./../happireshipi_front/
