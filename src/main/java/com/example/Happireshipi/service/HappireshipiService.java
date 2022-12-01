@@ -4,6 +4,7 @@ import com.example.Happireshipi.dao.Meal;
 import com.example.Happireshipi.repository.MealRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -18,6 +19,11 @@ public class HappireshipiService implements IHappireshipiService {
     @Override
     public Optional<Meal> findById(Integer id) {
         return mealRepository.findById(id);
+    }
+
+    @Override
+    public List<Meal> findAll() {
+        return mealRepository.findAll();
     }
 
 
