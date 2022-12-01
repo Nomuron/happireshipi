@@ -27,7 +27,7 @@ public class DaoTests {
     @Test
     void mealClassConstructWithParameters() {
         // GIVEN
-        Meal meal = new Meal(1,"Fondant", 200, "obiad", "Po pierwsze...", 20d, 3.2d, 10d);
+        Meal meal = new Meal(1,"Fondant", 200, "obiad", "", "Po pierwsze...", 20f, 3.2f, 10f);
         //when
         //then
         assertAll(() -> assertEquals(1, meal.getId()),
@@ -35,9 +35,9 @@ public class DaoTests {
                 () -> assertEquals(200, meal.getPerPortionCalories()),
                 () -> assertEquals("obiad", meal.getCategory()),
                 () -> assertEquals("Po pierwsze...", meal.getRecipe()),
-                () -> assertEquals(20d, meal.getProteins()),
-                () -> assertEquals(3.2d, meal.getCarbohydrates()),
-                () -> assertEquals(10d, meal.getFats()));
+                () -> assertEquals(20f, meal.getProteins()),
+                () -> assertEquals(3.2f, meal.getCarbohydrates()),
+                () -> assertEquals(10f, meal.getFats()));
     }
 
     @Test
@@ -49,9 +49,9 @@ public class DaoTests {
         meal.setPerPortionCalories(200);
         meal.setCategory("obiad");
         meal.setRecipe("Po pierwsze...");
-        meal.setProteins(20d);
-        meal.setCarbohydrates(3.2d);
-        meal.setFats(10d);
+        meal.setProteins(20f);
+        meal.setCarbohydrates(3.2f);
+        meal.setFats(10f);
         //when
         //then
         assertAll(() -> assertEquals(1, meal.getId()),
@@ -59,9 +59,9 @@ public class DaoTests {
                 () -> assertEquals(200, meal.getPerPortionCalories()),
                 () -> assertEquals("obiad", meal.getCategory()),
                 () -> assertEquals("Po pierwsze...", meal.getRecipe()),
-                () -> assertEquals(20d, meal.getProteins()),
-                () -> assertEquals(3.2d, meal.getCarbohydrates()),
-                () -> assertEquals(10d, meal.getFats()));
+                () -> assertEquals(20f, meal.getProteins()),
+                () -> assertEquals(3.2f, meal.getCarbohydrates()),
+                () -> assertEquals(10f, meal.getFats()));
     }
 
     @Test

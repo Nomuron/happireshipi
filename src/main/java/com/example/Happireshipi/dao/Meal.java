@@ -1,29 +1,65 @@
 package com.example.Happireshipi.dao;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
+import org.springframework.format.annotation.NumberFormat;
+
+import javax.persistence.*;
 
 @Entity
 public class Meal {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false)
+    @JdbcTypeCode(SqlTypes.INTEGER)
     private Integer id;
+    @Column(name = "name", nullable = false, length = 100)
+    @JdbcTypeCode(SqlTypes.VARCHAR)
     private String name;
+    @Column(nullable = false)
+    @JdbcTypeCode(SqlTypes.INTEGER)
     private Integer perPortionCalories;
+    @Column(nullable = false, length = 10)
+    @JdbcTypeCode(SqlTypes.VARCHAR)
     private String category;
+    @Column(nullable = false, length = 400)
+    @JdbcTypeCode(SqlTypes.VARCHAR)
+    private String imageDirectory;
+
+    @Column(nullable = false, length = 2147483647, columnDefinition = "TEXT")
     private String recipe;
-    private Double proteins;
-    private Double carbohydrates;
-    private Double fats;
+    @Column(nullable = false)
+    @JdbcTypeCode(SqlTypes.FLOAT)
+    private Float proteins;
+    @Column(nullable = false)
+    @JdbcTypeCode(SqlTypes.FLOAT)
+    private Float carbohydrates;
+    @Column(nullable = false)
+    @JdbcTypeCode(SqlTypes.FLOAT)
+    private Float fats;
+
+    public void setImageDirectory(String imageDirectory) {
+        this.imageDirectory = imageDirectory;
+    }
+
+    public String getImageDirectory() {
+        return imageDirectory;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public Meal() {
     }
 
-    public Meal(Integer id, String name, Integer perPortionCalories, String category, String recipe, Double proteins, Double carbohydrates, Double fats) {
+    public Meal(Integer id, String name, Integer perPortionCalories, String category, String imageDirectory, String recipe, Float proteins, Float carbohydrates, Float fats) {
         this.id = id;
         this.name = name;
         this.perPortionCalories = perPortionCalories;
         this.category = category;
+        this.imageDirectory = imageDirectory;
         this.recipe = recipe;
         this.proteins = proteins;
         this.carbohydrates = carbohydrates;
@@ -32,10 +68,6 @@ public class Meal {
 
     public Integer getId() {
         return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -70,27 +102,28 @@ public class Meal {
         this.recipe = recipe;
     }
 
-    public Double getProteins() {
+    public Float getProteins() {
         return proteins;
     }
 
-    public void setProteins(Double proteins) {
+    public void setProteins(Float proteins) {
         this.proteins = proteins;
     }
 
-    public Double getCarbohydrates() {
+    public Float getCarbohydrates() {
         return carbohydrates;
     }
 
-    public void setCarbohydrates(Double carbohydrates) {
+    public void setCarbohydrates(Float carbohydrates) {
         this.carbohydrates = carbohydrates;
     }
 
-    public Double getFats() {
+    public Float getFats() {
         return fats;
     }
 
-    public void setFats(Double fats) {
+    public void setFats(Float fats) {
         this.fats = fats;
     }
+
 }
