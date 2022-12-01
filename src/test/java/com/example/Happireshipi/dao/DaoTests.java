@@ -20,8 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class DaoTests {
 
-    @Autowired
-    private TestEntityManager entityManager;
+
     @Autowired
     MealRepository mealRepository;
 
