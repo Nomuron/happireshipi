@@ -1,9 +1,15 @@
 package com.example.Happireshipi.dao;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+
 
 @Entity
 @Table(name = "meal")
@@ -39,8 +45,17 @@ public class Meal {
     @JdbcTypeCode(SqlTypes.FLOAT)
     private Float fats;
 
-    //TODO: JOIN TABLE(JOIN COLUMNS)
-    // field to Ingredients
+    @OneToMany(mappedBy = "meal", orphanRemoval = true)
+    @JsonManagedReference
+    private List<MealIngredient> mealIngredients = new ArrayList<>();
+
+    public List<MealIngredient> getMealIngredients() {
+        return mealIngredients;
+    }
+
+    public void setMealIngredients(List<MealIngredient> mealIngredients) {
+        this.mealIngredients = mealIngredients;
+    }
 
 
     public void setImageDirectory(String imageDirectory) {
@@ -55,20 +70,20 @@ public class Meal {
         this.id = id;
     }
 
-    public Meal() {
-    }
-
-    public Meal(Integer id, String name, Integer perPortionCalories, String category, String imageDirectory, String recipe, Float proteins, Float carbohydrates, Float fats) {
-        this.id = id;
-        this.name = name;
-        this.perPortionCalories = perPortionCalories;
-        this.category = category;
-        this.imageDirectory = imageDirectory;
-        this.recipe = recipe;
-        this.proteins = proteins;
-        this.carbohydrates = carbohydrates;
-        this.fats = fats;
-    }
+//    public Meal() {
+//    }
+//
+//    public Meal(Integer id, String name, Integer perPortionCalories, String category, String imageDirectory, String recipe, Float proteins, Float carbohydrates, Float fats) {
+//        this.id = id;
+//        this.name = name;
+//        this.perPortionCalories = perPortionCalories;
+//        this.category = category;
+//        this.imageDirectory = imageDirectory;
+//        this.recipe = recipe;
+//        this.proteins = proteins;
+//        this.carbohydrates = carbohydrates;
+//        this.fats = fats;
+//    }
 
     public Integer getId() {
         return id;

@@ -1,9 +1,13 @@
 package com.example.Happireshipi.dao;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import org.hibernate.Hibernate;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "meal_ingredient")
@@ -19,8 +23,22 @@ public class MealIngredient {
     private Float amount;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "meal_id", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "meal_id", nullable = false)
+    @JsonBackReference
     private Meal meal;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "ingredient_id", nullable = false)
+    @JsonManagedReference
+    private Ingredient ingredient;
+
+    public Ingredient getIngredient() {
+        return ingredient;
+    }
+
+    public void setIngredient(Ingredient ingredient) {
+        this.ingredient = ingredient;
+    }
 
     public Meal getMeal() {
         return meal;
@@ -28,14 +46,6 @@ public class MealIngredient {
 
     public void setMeal(Meal meal) {
         this.meal = meal;
-    }
-
-    public MealIngredient() {
-    }
-
-    public MealIngredient(Integer id, Float amount) {
-        this.id = id;
-        this.amount = amount;
     }
 
     public void setAmount(Float amount) {
@@ -53,4 +63,5 @@ public class MealIngredient {
     public Integer getId() {
         return id;
     }
+
 }

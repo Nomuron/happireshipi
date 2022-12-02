@@ -1,12 +1,13 @@
 package com.example.Happireshipi.dao;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Entity
 @Table(name = "ingredient")
@@ -24,6 +25,19 @@ public class Ingredient {
     @Column(nullable = false, length = 70)
     @JdbcTypeCode(SqlTypes.VARCHAR)
     private String name;
+
+    @OneToMany(mappedBy = "ingredient", orphanRemoval = true)
+    @JsonBackReference
+    private List<MealIngredient> mealIngredients = new ArrayList<>();
+
+    public List<MealIngredient> getMealIngredients() {
+        return mealIngredients;
+    }
+
+    public void setMealIngredients(List<MealIngredient> mealIngredients) {
+        this.mealIngredients = mealIngredients;
+    }
+
 
     public void setName(String name) {
         this.name = name;
