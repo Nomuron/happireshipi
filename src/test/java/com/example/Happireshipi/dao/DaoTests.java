@@ -13,16 +13,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
-// INTEGRATION TEST - COMMENT IF BUILDING DOCKER IMAGE
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class DaoTests {
 
-
     @Autowired
     MealRepository mealRepository;
-
 
     @Test
     void mealClassConstructWithParameters() {

@@ -2,11 +2,11 @@ package com.example.Happireshipi.dao;
 
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
-import org.springframework.format.annotation.NumberFormat;
 
 import javax.persistence.*;
 
 @Entity
+@Table(name = "meal")
 public class Meal {
 
     @Id
@@ -38,6 +38,10 @@ public class Meal {
     @Column(nullable = false)
     @JdbcTypeCode(SqlTypes.FLOAT)
     private Float fats;
+
+    //TODO: JOIN TABLE(JOIN COLUMNS)
+    // field to Ingredients
+
 
     public void setImageDirectory(String imageDirectory) {
         this.imageDirectory = imageDirectory;
