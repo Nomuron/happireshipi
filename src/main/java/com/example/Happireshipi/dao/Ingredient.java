@@ -8,7 +8,6 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @Entity
 @Table(name = "ingredient")
 public class Ingredient {
@@ -38,7 +37,6 @@ public class Ingredient {
         this.mealIngredients = mealIngredients;
     }
 
-
     public void setName(String name) {
         this.name = name;
     }
@@ -55,7 +53,6 @@ public class Ingredient {
         return measure;
     }
 
-
     public void setId(Integer id) {
         this.id = id;
     }
@@ -63,5 +60,4 @@ public class Ingredient {
     public Integer getId() {
         return id;
     }
-
 }

@@ -12,6 +12,13 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+/*
+    NOTE:
+*   These tests won't run, cuz I removed constructors from entity classes.
+*   I keep them for reference for potential future integration tests.
+* */
+
 //
 //@DataJpaTest
 //@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)

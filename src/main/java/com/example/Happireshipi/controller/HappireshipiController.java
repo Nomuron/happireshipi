@@ -1,6 +1,5 @@
 package com.example.Happireshipi.controller;
 
-import com.example.Happireshipi.dao.Ingredient;
 import com.example.Happireshipi.dao.Meal;
 import com.example.Happireshipi.service.IHappireshipiService;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +14,7 @@ import java.util.List;
 @RequestMapping("/")
 public class HappireshipiController {
 
-    private IHappireshipiService happireshipiService;
+    private final IHappireshipiService happireshipiService;
 
     public HappireshipiController(IHappireshipiService happireshipiService) {
         this.happireshipiService = happireshipiService;
@@ -34,10 +33,5 @@ public class HappireshipiController {
     @GetMapping("/meal/all")
     public ResponseEntity<List<Meal>> findAllMeals() {
         return ResponseEntity.ok(happireshipiService.mealFindAll());
-    }
-
-    @GetMapping("/ingredient/{id}")
-    public ResponseEntity<Ingredient> findIngredientById(@PathVariable Integer id) {
-        return ResponseEntity.of(happireshipiService.ingredientFindById(id));
     }
 }

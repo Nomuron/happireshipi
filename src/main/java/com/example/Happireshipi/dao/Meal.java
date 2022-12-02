@@ -6,9 +6,7 @@ import org.hibernate.type.SqlTypes;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Set;
 
 
 @Entity
@@ -57,7 +55,6 @@ public class Meal {
         this.mealIngredients = mealIngredients;
     }
 
-
     public void setImageDirectory(String imageDirectory) {
         this.imageDirectory = imageDirectory;
     }
@@ -69,21 +66,6 @@ public class Meal {
     public void setId(Integer id) {
         this.id = id;
     }
-
-//    public Meal() {
-//    }
-//
-//    public Meal(Integer id, String name, Integer perPortionCalories, String category, String imageDirectory, String recipe, Float proteins, Float carbohydrates, Float fats) {
-//        this.id = id;
-//        this.name = name;
-//        this.perPortionCalories = perPortionCalories;
-//        this.category = category;
-//        this.imageDirectory = imageDirectory;
-//        this.recipe = recipe;
-//        this.proteins = proteins;
-//        this.carbohydrates = carbohydrates;
-//        this.fats = fats;
-//    }
 
     public Integer getId() {
         return id;
@@ -144,5 +126,4 @@ public class Meal {
     public void setFats(Float fats) {
         this.fats = fats;
     }
-
 }
