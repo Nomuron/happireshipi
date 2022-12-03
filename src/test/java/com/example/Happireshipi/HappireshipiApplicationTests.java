@@ -9,5 +9,4 @@ class HappireshipiApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
