@@ -8,4 +8,6 @@ public interface IHappireshipiService {
     Optional<Meal> mealFindById(Integer id);
 
     List<Meal> mealFindAll();
+
+    List<Meal> mealByCategory(String category);
 }

@@ -25,4 +25,11 @@ public class HappireshipiService implements IHappireshipiService {
     public List<Meal> mealFindAll() {
         return mealRepository.findAll();
     }
+
+    @Override
+    public List<Meal> mealByCategory(String category) {
+        List<Meal> categorizedMeals = mealRepository.findAll();
+        categorizedMeals.removeIf(meal -> !meal.getCategory().equals(category));
+        return categorizedMeals;
+    }
 }

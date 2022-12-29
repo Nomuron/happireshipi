@@ -34,4 +34,9 @@ public class HappireshipiController {
     public ResponseEntity<List<Meal>> findAllMeals() {
         return ResponseEntity.ok(happireshipiService.mealFindAll());
     }
+
+    @GetMapping("/meal/sort/{category}")
+    public ResponseEntity<List<Meal>> findAllByCategory(@PathVariable("category") String category) {
+        return ResponseEntity.ok(happireshipiService.mealByCategory(category));
+    }
 }
