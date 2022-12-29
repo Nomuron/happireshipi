@@ -1,0 +1,27 @@
+package com.example.Happireshipi.controller;
+
+import com.example.Happireshipi.service.UserService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping
+public class UserController {
+
+    private final UserService adminService;
+
+    public UserController(UserService adminService) {
+        this.adminService = adminService;
+    }
+
+    @GetMapping("/admin")
+    public ResponseEntity<Boolean> isCorrectAdmin(
+            @RequestHeader String login,
+            @RequestHeader String password
+    ) {
+        return ResponseEntity.ok(adminService.isCorrectAdmin(login, password));
+    }
+}
