@@ -1,10 +1,12 @@
 package com.example.Happireshipi.service;
 
 import com.example.Happireshipi.dao.Meal;
+import com.example.Happireshipi.dao.ShoppingListElement;
 import com.example.Happireshipi.repository.MealRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -32,4 +34,9 @@ public class HappireshipiService implements IHappireshipiService {
         categorizedMeals.removeIf(meal -> !meal.getCategory().equals(category));
         return categorizedMeals;
     }
+
+//    @Override
+//    public List<ShoppingListElement> generateShoppingList(List<Map<String, Integer>> mealList) {
+//        List<Meal> categorizedMeals = mealRepository.findAll();
+//    }
 }

@@ -1,14 +1,13 @@
 package com.example.Happireshipi.controller;
 
 import com.example.Happireshipi.dao.Meal;
+import com.example.Happireshipi.dao.ShoppingListElement;
 import com.example.Happireshipi.service.IHappireshipiService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/")
@@ -39,4 +38,9 @@ public class HappireshipiController {
     public ResponseEntity<List<Meal>> findAllByCategory(@PathVariable("category") String category) {
         return ResponseEntity.ok(happireshipiService.mealByCategory(category));
     }
+
+//    @PostMapping("/list")
+//    public ResponseEntity<List<ShoppingListElement>> generateList(@RequestBody List<Map<String, Integer>> mealList) {
+//        return ResponseEntity.ok(happireshipiService.generateShoppingList(mealList));
+//    }
 }

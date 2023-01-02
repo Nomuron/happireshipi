@@ -12,6 +12,13 @@ services:
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=postgres
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    networks:
+      - mynet
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://spring:8080/" ]
+      interval: 10s
+      timeout: 10s
+      retries: 3
   frontend:
     build:
       context: ./../happireshipi_front/
@@ -19,6 +26,11 @@ services:
       - "8081:8081"
     depends_on:
       - spring
+    links:
+      - spring
+    networks:
+      - mynet
+    restart: on-failure
   db:
     image: "postgres:15.1-bullseye"
     ports:
@@ -29,3 +41,9 @@ services:
       - POSTGRES_DB=happireshipi
     volumes:
       - ./init-database.sh:/docker-entrypoint-initdb.d/init-database.sh
+    networks:
+      - mynet
+
+networks:
+  mynet:
+    driver: bridge
