@@ -1,5 +1,6 @@
 package com.example.Happireshipi.service;
 
+import com.example.Happireshipi.dao.User;
 import com.example.Happireshipi.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -7,8 +8,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.Collections;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
@@ -20,8 +20,12 @@ public class UserServiceTest {
     @InjectMocks
     private UserService userService;
 
-//    @Test
-//    void isUserAdmin() {
-//        when(userRepository.findByCredentials("", "")).thenReturn(true);
-//    }
+    @Test
+    void isUserAdmin() {
+        when(userRepository.findByCredentials("", "")).thenReturn(new User());
+
+        Boolean admins = userService.isCorrectAdmin("", "");
+
+        assertEquals(admins, true);
+    }
 }
