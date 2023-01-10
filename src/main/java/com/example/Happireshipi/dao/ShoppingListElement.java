@@ -3,15 +3,13 @@ package com.example.Happireshipi.dao;
 public class ShoppingListElement {
 
     private String name;
-    private Integer amount;
+    private Float amount;
     private String measure;
-    private String nameOfMeasure;
 
-    public ShoppingListElement(String name, Integer amount, String measure, String nameOfMeasure) {
+    public ShoppingListElement(String name, Float amount, String measure) {
         this.name = name;
         this.amount = amount;
         this.measure = measure;
-        this.nameOfMeasure = nameOfMeasure;
     }
 
     public String getName() {
@@ -22,11 +20,11 @@ public class ShoppingListElement {
         this.name = name;
     }
 
-    public Integer getAmount() {
+    public Float getAmount() {
         return amount;
     }
 
-    public void setAmount(Integer amount) {
+    public void setAmount(Float amount) {
         this.amount = amount;
     }
 
@@ -36,13 +34,5 @@ public class ShoppingListElement {
 
     public void setMeasure(String measure) {
         this.measure = measure;
-    }
-
-    public String getNameOfMeasure() {
-        return nameOfMeasure;
-    }
-
-    public void setNameOfMeasure(String nameOfMeasure) {
-        this.nameOfMeasure = nameOfMeasure;
     }
 }

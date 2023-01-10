@@ -1,6 +1,7 @@
 package com.example.Happireshipi.controller;
 
 import com.example.Happireshipi.dao.Meal;
+import com.example.Happireshipi.dao.MealList;
 import com.example.Happireshipi.dao.ShoppingListElement;
 import com.example.Happireshipi.service.IHappireshipiService;
 import org.springframework.http.ResponseEntity;
@@ -42,9 +43,9 @@ public class HappireshipiController {
         return ResponseEntity.ok(happireshipiService.mealByCategory(category));
     }
 
-//    @CrossOrigin
-//    @PostMapping("/list")
-//    public ResponseEntity<List<ShoppingListElement>> generateList(@RequestBody List<Map<String, Integer>> mealList) {
-//        return ResponseEntity.ok(happireshipiService.generateShoppingList(mealList));
-//    }
+    @CrossOrigin
+    @PostMapping("/list")
+    public ResponseEntity<List<ShoppingListElement>> generateList(@RequestBody MealList mealList) {
+        return ResponseEntity.ok(happireshipiService.generateShoppingList(mealList));
+    }
 }

@@ -1,5 +1,6 @@
 package com.example.Happireshipi.service;
 import com.example.Happireshipi.dao.Meal;
+import com.example.Happireshipi.dao.MealList;
 import com.example.Happireshipi.dao.ShoppingListElement;
 
 import java.util.List;
@@ -13,5 +14,5 @@ public interface IHappireshipiService {
 
     List<Meal> mealByCategory(String category);
 
-//    List<ShoppingListElement> generateShoppingList(List<Map<String, Integer>> mealList);
+    List<ShoppingListElement> generateShoppingList(MealList mealList);
 }
