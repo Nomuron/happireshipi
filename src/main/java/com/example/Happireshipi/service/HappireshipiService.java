@@ -39,7 +39,8 @@ public class HappireshipiService implements IHappireshipiService {
     public List<ShoppingListElement> generateShoppingList(MealList mealList) {
         List<Meal> categorizedMeals = mealRepository.findAll();
         List<ShoppingListElement> ingredientList = new java.util.ArrayList<>(Collections.emptyList());
-        boolean executed = false;
+        List<String> tempList = new java.util.ArrayList<>(Collections.emptyList());
+        List<ShoppingListElement> finalIngredientList = new java.util.ArrayList<>(Collections.emptyList());
 
         for (Map<String, Integer> meal : mealList.getMealList()){
             System.out.println(meal.keySet());
@@ -69,10 +70,24 @@ public class HappireshipiService implements IHappireshipiService {
 //                        }
                     }
                 }
-
             }
         }
-
-        return ingredientList;
+        for (ShoppingListElement element : ingredientList) {
+            if (tempList.contains(element.getName())) {
+                int index = tempList.indexOf(element.getName());
+                tempList.add(index+1, String.valueOf(Float.parseFloat(tempList.get(index+1))+ element.getAmount()));
+                tempList.remove(index+2);
+            } else {
+                tempList.add(element.getName());
+                tempList.add(element.getAmount().toString());
+                tempList.add(element.getMeasure());
+            }
+        }
+        System.out.println(tempList);
+        for (int i=0; i<=(tempList.size()-1); i=i+3) {
+            finalIngredientList.add(new ShoppingListElement(tempList.get(i), Float.parseFloat(tempList.get(i+1)), tempList.get(i+2)));
+        }
+//        return ingredientList;
+        return finalIngredientList;
     }
 }
