@@ -15,7 +15,7 @@ public class UserController {
     }
 
     @CrossOrigin
-    @GetMapping("/admin")
+    @PostMapping("/admin")
     public ResponseEntity<Boolean> isCorrectAdmin(
             @RequestHeader String login,
             @RequestHeader String password
