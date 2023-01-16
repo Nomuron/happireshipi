@@ -18,118 +18,118 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-E
     );
 
     INSERT INTO meal(id, name, per_portion_calories, category, image_directory, recipe, proteins, carbohydrates, fats)
-    VALUES (1, 'Fondant czekoladowy', 600, 'deser', 'https://i.imgur.com/eIxZgQZ.jpg', 'Krok1:
+    VALUES (1, 'Fondant czekoladowy', 600, 'deser', 'https://i.imgur.com/eIxZgQZ.jpg', '<br>Krok1:<br>
            Z podanej przeze mnie liczby składników wychodzą dwa desery pieczone Lava Cake (średnica u podstawy 10 cm, zaś wysokość około 4 cm). Można też sięgnąć np. po wyższe kokilki. Użyłam metalowych foremek o pojemności 230 ml, więc fondant czekoladowy nie wypełnił ich całych na wysokość. Nie ma to jednak znaczenia, ponieważ lava cake i tak wyjmujemy z foremki do podania. Foremki należy bardzo dokładnie wysmarować od środka masłem, a następnie oprószyć mąką.
-           Krok2:
+           <br>Krok2:<br>
            50 gramów (klasyczna tabliczka) dobrej jakości czekolady gorzkiej (u mnie 70 %) roztop razem z masłem w kąpieli wodnej. Czekoladę warto wcześniej posiekać drobno lub połamać na małe kawałki. Masło również można pokroić na mniejsze kawałki.
-           Krok3:
+           <br>Krok3:<br>
            Tak więc miskę szklaną umieść na garnuszku do 1/3 wypełnionym wrzątkiem. Dno miseczki nie powinno dotykać do wody, za to ma być na tyle szerokie, by można je było umieścić - na garnku. Ustaw małą moc palnika i cierpliwie czekaj, aż czekolada zacznie się powoli roztapiać. Zazwyczaj cały czas mieszam sobie w misce np. szpatułką. Gdy czekolada będzie już praktycznie roztopiona, do miski dodaję też 25 gramów masła i mieszam całość tak długo, aż masło połączy się z czekoladą.
-           Krok4:
+           <br>Krok4:<br>
            Gotową, gładką i błyszczącą czekoladową mieszankę zdejmij z garnka i odłóż na bok, do lekkiego przestudzenia. Możesz już zacząć nagrzewać piekarnik razem z kratką lub blaszką, na której położysz gotowe do pieczenia foremki z Lava Cake. Ustaw 200 stopni z opcją pieczenia góra/dół.
-           Krok5:
+           <br>Krok5:<br>
            Do osobnej miski wbij jajko. Dodaj pół szczypty soli i wsyp 15 gramów cukru drobnego, czyli 1,5 płaskiej łyżki cukru. Całość miksuj na wysokich obrotach tak długo, aż cukier rozpuści się w jajka i powstanie Ci puch jajeczny. Jeśli dasz cukier puder zamiast cukru drobnego, to zapewne puch jajeczny będzie gotowy o kilka minut szybciej.
-           Krok6:
+           <br>Krok6:<br>
            Cienką strużką wlewaj przestudzoną (może być jeszcze lekko ciepła) czekoladę z masłem. Cały czas mieszaj też powoli puch jajeczny przy pomocy szpatułki. Gdy dodasz już całą płynną czekoladę, to do miski wsyp też łyżkę mąki (najlepiej rzez sitko) i dalej powoli i delikatnie mieszaj wszystko szpatułką, aż powstanie Ci jednolita masa. Lava Cake można też urozmaicić dodając do masy np. odrobiny ekstraktu waniliowego, bardzo mocno parzoną kawę (przestudzona esencja) w niewielkiej ilości albo też szczyptę cynamonu.
-           Krok7:
+           <br>Krok7:<br>
            Masę przelej do przygotowanych wcześniej dwóch foremek.
-           Krok8:
+           <br>Krok8:<br>
            Foremki umieść w piekarniku nagrzanym do 200 stopni z opcją pieczenia góra/dół. Pamiętaj o tym, że nagrzana ma być też kratka lub blaszka, na której położysz gotowe do pieczenia foremki z Lava Cake. Fondant czekoladowy piecz tak około 8 minut lub też do 10 minut jeśli wolisz, by środek nie był bardzo płynny. Lava cake wyjmujemy z pieca od razu po upieczeniu.
-           Krok9:
+           <br>Krok9:<br>
            Po kilku minutach od upieczenia przyłóż talerzyk do foremki i odwróć go, by lava cake ładnie wyskoczyło na talerz. Fondant czekoladowy można przed podaniem oprószyć cukrem pudrem lub kakao i udekorować np. malinami, borówkami, truskawkami, czy też innymi ulubionymi owocami (również mrożone). Lava cake świetnie smakuje w towarzystwie lodów waniliowych lub czekoladowych.', 7.7, 28.3, 28),
-           (2, 'Wegetariańska Carbonara', 700, 'obiad', 'https://i.imgur.com/mHwFOjd.jpeg', 'Krok1:
+           (2, 'Wegetariańska Carbonara', 700, 'obiad', 'https://i.imgur.com/mHwFOjd.jpeg', '<br>Krok1:<br>
            Rozgrzej piekarnik do 220 stopni Celsjusza. Ciecierzycę odsącz z zalewy; wysusz za pomocą ściereczki lub ręcznika papierowego. Przełóż na blachę wyłożoną papierem do pieczenia. Wymieszaj dokładnie z oliwą, wędzoną papryką i solą. Piecz przez około 20 minut, mieszając raz czy dwa, aż ciecierzyca będzie chrupiąca.
-           Krok2:
+           <br>Krok2:<br>
            Ugotuj makaron wg instrukcji na opakowaniu. Odcedź go, zachowując ¼ szklanki wody.
-           Krok3:
+           <br>Krok3:<br>
            W dużej misce wymieszaj dokładnie żółtka z parmezanem i czosnkiem. Dopraw dużą ilością świeżo mielonego pieprzu i szczyptą soli.
-           Krok4:
+           <br>Krok4:<br>
            Ugotowany makaron wmieszaj do masy jajecznej wraz z ¼ szklanki zachowanej wody, łyżką zimnego masła, aż pokryje się kremowo-jajecznym sosem. Najlepiej robić to za pomocą szczypiec. Jeśli sos będzie zbyt rzadki, przełóż go wraz z makaronem go garnka, w którym się gotował. Podgrzewaj na małym ogniu, często mieszając. Dodaj odrobinę zachowanej wody, jeśli sos będzie zbyt zgęstnieje. Wmieszaj ¾ chrupiącej ciecierzycy.
-           Krok5:
+           <br>Krok5:<br>
            Carbonarę przełóż na talerze, posyp pozostałą chrupiącą ciecierzycą. Dopraw świeżo mielonym pieprzem, szczyptą wędzonej papryki i odrobiną świeżego tymianku.', 4, 8.8, 5.2),
-           (3, 'Makaron z kurczakiem i brokułem w sosie serowym', 700, 'obiad', 'https://i.imgur.com/3lMCAkL.jpg', 'Krok1:
+           (3, 'Makaron z kurczakiem i brokułem w sosie serowym', 700, 'obiad', 'https://i.imgur.com/3lMCAkL.jpg', '<br>Krok1:<br>
            Ugotuj makaron taki jaki lubisz. Najlepiej penne lub kokardki.
-           Krok2:
+           <br>Krok2:<br>
            Pokrój kurczaka w kostkę, dopraw solą, pieprzem, przyprawą do kurczaka. Usmaż z odrobiną oleju rzepakowego.
-           Krok3:
+           <br>Krok3:<br>
            Umyj i pokrój według własnych preferencji brokuł. Ugotuj go – na miękko lub twardo – jak lubisz.
-           Krok4:
+           <br>Krok4:<br>
            W rondelku umieść serki topione oraz wlej ok. 15 ml mleka. Pamiętaj, że sos szybko może się przypalić, więc bardzo częste mieszanie jest wskazane. Gdy serek się rozpuści dopraw sos pieprzem, szczyptą (lub jak wolisz) oregano. Zdecyduj, czy gęstość sosu Tobie odpowiada. Jeśli jest za gęsty, dolej więcej mleka.
-           Krok5:
+           <br>Krok5:<br>
            Gotowy makaron umieść na talerzach, połóż na wierzch kawałki ugotowanego brokułu i usmażonego kurczaka. Polej sosem.', 5, 10, 4.5),
-           (4, 'Penne alla Vodka', 609, 'obiad', 'https://i.imgur.com/7LcmNoD.png', 'Krok1:
+           (4, 'Penne alla Vodka', 609, 'obiad', 'https://i.imgur.com/7LcmNoD.png', '<br>Krok1:<br>
            Na dużej patelni smaż na sucho siekane prosciutto (możesz wymienić je boczkiem).
-           Krok2:
+           <br>Krok2:<br>
            Gdy prosciutto będzie podsmażone dodaj oliwę i siekana szalotka z czosnkiem. Smaż.
-           Krok3:
+           <br>Krok3:<br>
            Dodaj rozmieszczone pomidory pelati, wódkę i do tego bazylię. Przypraw solą i pieprzem. Zdejmij bazylię.
-           Krok4:
+           <br>Krok4:<br>
            Dodał śmietankę i zimne masło. Sos gotuj na małym ogniu w tym czasie przygotuj makaron.
-           Krok5:
+           <br>Krok5:<br>
            Gotuj makaron al dente.
-           Krok6:
+           <br>Krok6:<br>
            Gdy sos lekko zgęstnieje (część wody odparuje) dodaj makaron do sosu, posyp odrobiną parmezanu, siekaną natką pietruszki i podaj na talerz!', 8.4, 20.5, 9.4),
-           (5, 'Bajgiel z jajkiem sadzonym', 190, 'śniadanie', 'https://i.imgur.com/NWrfjXx.jpeg', 'Krok1:
+           (5, 'Bajgiel z jajkiem sadzonym', 190, 'śniadanie', 'https://i.imgur.com/NWrfjXx.jpeg', '<br>Krok1:<br>
            Przygotuj jajka sadzone wedle uznania.
-           Krok2:
+           <br>Krok2:<br>
            Podsmaż szynkę szwarcwaldzką na patelni.
-           Krok3:
+           <br>Krok3:<br>
            Pokrój pomidora, ogórek, umyj parę listków sałaty.
-           Krok4:
+           <br>Krok4:<br>
            Przekrój bajgla na pół. Obie połówki połóż na tosterze wnętrzem do dołu i opiekaj przez 3 min.
-           Krok5:
+           <br>Krok5:<br>
            Na opieczoną dolną część bajgla połóż liść/liście sałaty, posmaruj musztardą, przykryj podsmażoną szynkę szwarcwaldzką. Na wierzch dodaj jajko sadzone, pokrojone plastry pomidora oraz ogórka. Przykryj górną częścią bajgla. Smacznego!', 12.6, 25.6, 7.6),
-           (6, 'Tarta cytrynowa na palonym maśle', 332, 'deser', 'https://i.imgur.com/o8aE8xV.jpeg', 'Krok1:
+           (6, 'Tarta cytrynowa na palonym maśle', 332, 'deser', 'https://i.imgur.com/o8aE8xV.jpeg', '<br>Krok1:<br>
            Najlepiej przygotować danie na 10 porcji. Opis poniżej względem 10 porcji.
            Jedną cytrynę pokrój w najcieńsze plasterki, jak tylko potrafisz; pozbądź się pestek. Z pozostałych 4 cytryn wyciśnij sok. Połącz sok cytrynowy z 1 szklanką cukru, tworząc swego rodzaju -lemoniadę. Spróbuj, jeśli jest dla ciebie za kwaśna, dodaj trochę więcej cukru. Zanurz w niej cytryny. Odstaw na minimum godzinę, a najlepiej całą noc do lodówki. Kilkukrotnie przemieszaj, aby rozprowadzić cukier. Czym cytryna bardziej zmięknie, tym tarta wyjdzie smaczniejsza. Macerowanie przez godzinę jest czasem minimalnym, ale warto sobie zorganizować wcześniej pieczenie i nastawić cytrynę wieczorem, aby zdążyła idealnie zmięknąć. Zbyt krótki czas macerowania będzie skutkować trudnością krojenia tarty, a następnie jej jedzenia.
-           Krok2:
+           <br>Krok2:<br>
            Formę do tarty z wyjmowanym dnem o średnicy 23 cm lub tortownicę wysmaruj masłem i obsyp mąką.
-           Krok3:
+           <br>Krok3:<br>
            200 g mąki połącz z cukrem pudrem i 1,5 płaskiej łyżeczki soli. W garnuszku rozpuść masło, gotuj je na średnim ogniu, często mieszając, 5 – 8 minut, do momentu, aż zacznie orzechowo pachnieć i nabierać złotobrązowego koloru z ciemnymi plamkami. Ostudź palone masło.
-           Krok4:
+           <br>Krok4:<br>
            Palone masło wlej do wcześniej przygotowanej w kroku 3 mąki; połącz wszystko drewnianą łyżką. Powstanie lekko wilgotna masa; wylep nią formę. Ciasto obsyp odrobiną mąki. Możesz pomóc sobie szklanką, dociskając nią ciasto w formę. Schłodź spód w lodówce 30 – 40 minut lub zamrażarce 10 – 15 minut, do całkowitego stężenia.
-           Krok5:
+           <br>Krok5:<br>
            Rozgrzej piekarnik do 190 stopni Celsjusza (góra-dół).
-           Krok6:
+           <br>Krok6:<br>
            W międzyczasie przygotuj nadzienie. Wyjmij pasterki cytryny z lemoniady. Bardzo dokładnie połącz ją z 2 jajkami, 3 żółtkami, 30 g mąki i ¼ łyżeczki soli. Najlepiej zrobić to blenderem ręcznym, aby łatwo pozbyć się wszystkich grudek mąki. Uderz kilka razy miską o stół, aby pozbyć się pęcherzyków powietrza, które wytworzyły się podczas miksowania. Przełóż płynne nadzienie na mocno schłodzony spód. Ułóż plasterki cytryn po całej powierzchni.
-           Krok7:
+           <br>Krok7:<br>
            Piecz przez 30 – 35 minut, aż nadzienie się zetnie i przestanie być -galaretkowate. Jeśli tarta zacznie nabierać rumieńców podczas pieczenia, przykryj ją folią aluminiową. Wystudź przed podaniem. Tarta najlepiej smakuje z kleksem bitej śmietany, labneh lub o mój boże, gałką lodów waniliowych.', 6.3, 45, 17.5),
-           (7, 'Ragu alla bolognese', 750, 'obiad', 'https://i.imgur.com/qZszbtn.jpg', 'Krok1:
+           (7, 'Ragu alla bolognese', 750, 'obiad', 'https://i.imgur.com/qZszbtn.jpg', '<br>Krok1:<br>
            Najlepiej przygotować danie na 4 porcje.
            Przygotuj soffrito: obierz cebulę i przekrój na pół. Następnie połóż połówki cebuli płaską stroną na desce do krojenia i pokrój w plasterki, a następnie w drobną kostkę. Usuń końcówki marchwi za pomocą małego noża i obieraczką do ziemniaków obierz marchewkę i umyj pod bieżącą wodą. Pokrój marchewkę na bardzo cienkie podłużne plastry, następnie plastry przekrój na pół i w kostkę. Umyj seler, usuń liście i górną część selera. Usuń zewnętrzną powłokę za pomocą obieraczki do ziemniaków. Podziel seler na pół i potnij na cienkie paski, a następnie pokrój w małą kostkę. Podgrzej oliwę z oliwek na patelni, a następnie dodaj pokrojoną cebulę, marchew i seler naciowy. Smaż warzywa na małym ogniu przez co najmniej 15 minut od czasu do czasu mieszając. Nie przyprawiaj, gdyż jest to baza do twoich dań i będzie przyprawiona w czasie przygotowywania potrawy.
-           Krok2:
+           <br>Krok2:<br>
            Na patelni rozgrzej oliwę (kilka łyżek) i podsmaż na niej boczek, czekając aż zacznie wytapiać się z niego tłuszcz.
-           Krok3:
+           <br>Krok3:<br>
            Dodaj do boczku przygotowane uprzednio soffritto i grubo zmieloną wołowinę. Całość smaż przez 10 minut mieszając od czasu do czasu.
-           Krok4:
+           <br>Krok4:<br>
            Do patelni dolej białego wina, a na czas aż alkohol wyparuje zwiększ ogień. Po wyparowaniu alkoholu dodaj do sosu pomidorową passatę. Całość zalej gorącym bulionem. Dodaj szczyptę soli, zamieszaj i gotuj na średnim ogniu przez minimum 2 godziny. Co jakiś czas mięso zamieszaj i w razie potrzeby (jeśli ragu będzie zbyt suche) dolej odrobinę bulionu. Na koniec całość dopraw solą i pieprzem, wyłącz grzanie pod garnkiem i dodaj mleko. Całość dokładnie wymieszaj i sos gotowy.
-           Krok5:
+           <br>Krok5:<br>
            Ugotuj makaron, najlepiej taglatelle według uznania – proponujemy al dente.
-           Krok6:
+           <br>Krok6:<br>
            Do misek rozłóż makaron, dodaj ragu i posyp odrobiną parmezanu. Smacznego!', 11.5, 11.6, 7),
-           (8, 'Indyjska bhorta z paluszkami rybnymi', 635, 'obiad', 'https://i.imgur.com/6RoN9OM.jpg', 'Krok1:
+           (8, 'Indyjska bhorta z paluszkami rybnymi', 635, 'obiad', 'https://i.imgur.com/6RoN9OM.jpg', '<br>Krok1:<br>
            Zacznij od piklowanej cebuli. Pół cebuli czerwonej posiekanej w cienkie pióra przełóż do słoika lub miski. Zalej octem, tak aby była cała zanurzona. Odstaw do lodówki na min. 1 godzinę.
-           Krok2:
+           <br>Krok2:<br>
            Rozgrzej piekarnik do 220 stopni Celsjusza. Piecz paluszki rybne 30 – 40 minut, aż będą bardzo mocno wypieczone. Za pomocą widelca rozgnieć na mniejsze kawałki.
-           Krok3:
+           <br>Krok3:<br>
            Rozgrzej oliwę dużej patelni. 2 posiekane białe cebule w cienkie pióra - smaż na stosunkowo małym ogniu, często mieszając, aż się skarmelizuje i nabierze karmelowego koloru, około 20 minut. Jeśli cebula zacznie się przypalać, dodaj szczodrą szczyptę soli, dzięki niej cebula puści trochę wody. Na koniec dodaj cukier i smaż jeszcze 1 – 2 minuty.
-           Krok4:
+           <br>Krok4:<br>
            Dodaj chili, imbir utarty na tarce i czosnek – zmiażdżony lub pokrojony. Smaż, często mieszając, aż zaczną intensywnie pachnieć, 2 – 3 minuty. Wmieszaj musztardę, przemieszaj wszystko. Dodaj szpinak i gotuj, mieszając, aż całkowicie straci na objętości. Dopraw solą i pieprzem; wyciśnij sok z limonki. Zdejmij z ognia i dodaj paluszki rybne. Przełóż na talerze. Udekoruj piklowaną cebulą i kolendrą. Czy to nie jest wspaniałe?', 10.5, 13.1, 23.6),
-           (9, 'Pieczony kalafior', 250, 'obiad', 'https://i.imgur.com/e4fJHGg.png', 'Krok1:
+           (9, 'Pieczony kalafior', 250, 'obiad', 'https://i.imgur.com/e4fJHGg.png', '<br>Krok1:<br>
            Ze swojego kalafiora zdejmij okalające go ścisło liście i odetnij wystający głąb. Ostrożnie odetnij wszystkie różyczki kalafiora. Krok2:
            Różyczki umieść na sitku i przepłucz pod zimną, bieżącą wodą. Po obraniu i odkrojeniu różyczek wyszło mi 790 gramów gotowych do pieczenia różyczek kalafiora. Obierz też jedną lub dwie marchewki i pokrój je w plasterki. Marchewkę można pominąć.
-           Krok3:
+           <br>Krok3:<br>
            W małej miseczce umieść wszystkie przyprawy: łyżeczka słodkiej papryki; pół łyżeczki soli lub trochę więcej; po 1/3 płaskiej łyżeczki pieprzu, ostrej papryki i mielonego kminu; szczypta kurkumy. Wlej też cztery łyżki delikatnej oliwy lub innego oleju roślinnego. Aby kalafior był lekko słodki i bardziej się przypiekł, można dodać też odrobinę cukru pudru, miodu lub syropu. Do przypraw warto też wycisnąć jeden ząbek czosnku. Całość wymieszaj i wylej na różyczki kalafiora i plasterki marchewki.
-           Krok4:
+           <br>Krok4:<br>
            Blaszkę umieść w piekarniku nagrzanym do 190-200 stopni. Wybierz środkową półkę i piecz warzywa do 35 minut z opcją pieczenia góra/dół. Jeśli masz małą komorę lub Twoje warzywa podpiekają się już po 10 minutach, to zmniejsz moc palnika do 180 stopni. Moje piekły się przez 30 minut. Nie przewracałam ich na drugą stronę. Jeśli jednak chcesz, by warzywa były od góry zarumienione, to pod koniec pieczenia przełącz piekarnik na opcję grillowania od góry. Porada: Na kilka minut przed końcem pieczenia można posypać całość tartym serem żółtym lub parmezanem oraz dodać pokruszone orzechy włoskie, nerkowce lub pekan. Kalafior pieczony podawaj gorący maczając go w ulubionym sosie np. czosnkowym lub jogurtowym. Warto udekorować go natką pietruszki a dla smaku skropić świeżo wyciskanym sokiem z cytryny.', 4, 3.1, 10.2),
-           (10, 'Tosty z serem i szynką', 400, 'kolacja', 'https://i.imgur.com/oHxqV1i.jpg', 'Krok1:
+           (10, 'Tosty z serem i szynką', 400, 'kolacja', 'https://i.imgur.com/oHxqV1i.jpg', '<br>Krok1:<br>
            Kromki chleba tostowego posmaruj masłem.
-           Krok2:
+           <br>Krok2:<br>
            Pokrój na plasterki szynkę oraz ser.
-           Krok3:
+           <br>Krok3:<br>
            Połóż na jedną kromkę plasterek sera oraz szynki. Posyp oregano.
-           Krok4:
+           <br>Krok4:<br>
            Przykryj drugą kromką. Zapiekaj przez ok. 4 min w opiekaczu.
-           Krok4:
+           <br>Krok4:<br>
            Połóż opieczone tosty na talerze i smacznego! 1 porcja przewiduje jednego tosta.', 13, 30, 8);
 
     CREATE TABLE ingredient(
